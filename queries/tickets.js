@@ -35,7 +35,7 @@ const searchForTicket = async (term) => {
 
   try {
     const searchResults = await db.any(
-      "SELECT * FROM tickets WHERE name ILIKE $1",
+      "SELECT * FROM tickets WHERE title ILIKE $1",
       [formTerm]
     );
 
