@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to my Internal Ticket System!");
 });
 
-app.use("/tickets", gamesController);
+app.use("/tickets", ticketsController);
 
 app.get("*", (req, res) => {
   res.status(404).send("Page not found!");
